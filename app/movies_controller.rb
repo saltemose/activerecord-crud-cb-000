@@ -33,15 +33,15 @@ def can_be_created_in_a_block(args = __)
 end
 
 def can_get_the_first_item_in_the_database
-  __
+  self.first.title
 end
 
 def can_get_the_last_item_in_the_database
-  __
+  self.title.last
 end
 
 def can_get_size_of_the_database
-  __
+  self.title.count
 end
 
 def can_find_the_first_item_from_the_database_using_id
