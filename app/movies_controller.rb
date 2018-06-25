@@ -82,7 +82,7 @@ def can_update_multiple_items_at_once
   Movie.all.each do |movie|
     movie.update(title: "A Movie")
   end
-  
+
 end
 
 def can_destroy_a_single_item
@@ -94,5 +94,5 @@ def can_destroy_all_items_at_once
   10.times do |i|
     Movie.create(title: "Movie_#{i}")
   end
-  __
+  Movie.all.destoy_all
 end
