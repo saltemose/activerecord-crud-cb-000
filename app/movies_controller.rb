@@ -25,9 +25,10 @@ def can_be_created_with_a_hash_of_attributes
     movie
 end
 
-def can_be_created_in_a_block(args = __)
+def can_be_created_in_a_block(args = {title: "Home Alone", release_date: 1990})
   Movie.create do |m|
-    __
+    args.each do |arg, val|
+      Movie.arg = val
   end
 end
 
