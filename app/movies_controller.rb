@@ -6,7 +6,7 @@
 # end                              # end
 
 def can_be_instantiated_and_then_saved
-  movie = Movies.new 
+  movie = Movies.new
   movie.title = "This is a title."
   movie.save
 end
@@ -19,7 +19,11 @@ def can_be_created_with_a_hash_of_attributes
       lead: "Paul Newman",
       in_theaters: false
   }
-  movie = __
+  movie = Movie.new(attr_hash)
+    attr_hash.each do |attr, val|
+      movie.attr = val
+    end
+    movie.save
 end
 
 def can_be_created_in_a_block(args = __)
