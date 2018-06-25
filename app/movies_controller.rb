@@ -19,10 +19,8 @@ def can_be_created_with_a_hash_of_attributes
       lead: "Paul Newman",
       in_theaters: false
   }
-  movie = Movie.new(attr_hash)
-    attr_hash.each do |attr, val|
-      movie.attr = val
-    end
+  movie = Movie.new(attributes)
+    movie = Movie.new(attributes)
     movie.save
 end
 
